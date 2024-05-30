@@ -102,10 +102,24 @@ function comparalistas(letra){
 
     if(vitoria == true)
     {
-        abreModal("PARABÉNS!", "Você venceu...");
+        showMessage()
+        //abreModal("PARABÉNS!", "Você venceu...");
         tentativas = 0;
-        piscarBotaoJogarNovamente(true);
+        piscarBotaoJogarNovamente(false);
+        setTimeout(()=>{
+            sortear();
+        }, 3000)
     }
+}
+
+function showMessage() {
+    const messageElement = document.getElementById('message');
+    messageElement.style.display = 'block';
+    
+    // Ocultar a mensagem após 3 segundos
+    setTimeout(() => {
+        messageElement.style.display = 'none';
+    }, 3000);
 }
 
 // async function piscarBotaoJogarNovamente(){
@@ -168,7 +182,7 @@ bntReiniciar.addEventListener("click", function(){
 });
 
 function listaAutomatica(){ // ativa o modo manual
-    if (jogoAutomatico == true) {
+    if (jogoAutomatico == false) {
         document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-play-circle'></i>"
         palavras = [];
         jogoAutomatico = false;
@@ -176,7 +190,7 @@ function listaAutomatica(){ // ativa o modo manual
         document.getElementById("abreModalAddPalavra").style.display = "block";
         document.getElementById("status").innerHTML = "Modo Manual";
     }
-    else if(jogoAutomatico == false){ // ativa o modo automático
+    else if(jogoAutomatico == true){ // ativa o modo automático
         document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-pause-circle'></i>"
         jogoAutomatico = true;
 
@@ -212,11 +226,11 @@ function carregaListaAutomatica(){
     palavras = [
         palavra001 = {
             nome: "TECNOLOGIA",
-            categoria:"CIDADE INTELIGENTE"
+            categoria:"DICA: CIDADE INTELIGENTE"
         },
         palavra002 = {
             nome: "MOBILIDADE",
-            categoria:"ASPECTOS DE UMA CIDADE INTELIGENTE"
+            categoria:"DICA: ASPECTOS DE UMA CIDADE INTELIGENTE"
         },
         palavra003 = {
             nome: "LARANJA",
@@ -228,7 +242,7 @@ function carregaListaAutomatica(){
         },
         palavra005 = {
             nome: "CURITIBA",
-            categoria:"EXEMPLO DE UMA CIDADE INTELIGENTE"
+            categoria:"DICA: EXEMPLO DE UMA CIDADE INTELIGENTE"
         }
     ];
 }
