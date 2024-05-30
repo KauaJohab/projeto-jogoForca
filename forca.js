@@ -211,44 +211,24 @@ window.onclick = function(){
 function carregaListaAutomatica(){
     palavras = [
         palavra001 = {
-            nome: "IRLANDA",
-            categoria:"LUGARES"
+            nome: "TECNOLOGIA",
+            categoria:"CIDADE INTELIGENTE"
         },
         palavra002 = {
-            nome: "EQUADOR",
-            categoria:"LUGARES"
+            nome: "MOBILIDADE",
+            categoria:"ASPECTOS DE UMA CIDADE INTELIGENTE"
         },
         palavra003 = {
-            nome: "CHILE",
-            categoria:"LUGARES"
+            nome: "LARANJA",
+            categoria:"LIXEIRA PARA COISAS PERIGOSAS OU CONTAMINADAS"
         },
         palavra004 = {
-            nome: "INDONESIA",
-            categoria:"LUGARES"
+            nome: "CINZA",
+            categoria:"LIXEIRA PARA COISAS NAO RECICLAVEIS E CONTAMINADAS"
         },
         palavra005 = {
-            nome: "MALDIVAS",
-            categoria:"LUGARES"
-        },
-        palavra006 = {
-            nome: "INGLATERRA",
-            categoria:"LUGARES"
-        },
-        palavra007 = {
-            nome: "GROELANDIA",
-            categoria:"LUGARES"
-        },
-        palavra008 = {
-            nome: "UZBEQUISTAO",
-            categoria:"LUGARES"
-        },
-        palavra009 = {
-            nome: "INDONESIA",
-            categoria:"LUGARES"
-        },
-        palavra010 = {
-            nome: "CREGUENHEM",
-            categoria:"LUGARES"
+            nome: "CURITIBA",
+            categoria:"EXEMPLO DE UMA CIDADE INTELIGENTE"
         }
     ];
 }
